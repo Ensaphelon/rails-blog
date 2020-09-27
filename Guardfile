@@ -15,7 +15,7 @@
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
-guard 'livereload' do
+guard 'livereload', port: '35729', host: '0.0.0.0' do
   extensions = {
     css: :css,
     scss: :css,
@@ -53,3 +53,4 @@ guard 'livereload' do
   watch(%r{app/helpers/.+\.rb})
   watch(%r{config/locales/.+\.yml})
 end
+
